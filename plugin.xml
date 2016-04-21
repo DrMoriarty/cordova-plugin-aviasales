@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-aviasales"
+    version="1.0.0">
+
+    <name>AviaSales</name>
+    <description>Aviasales/Jetradar plugin for Cordova</description>
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+	
+    <license>Apache 2.0 License</license>
+    <author>DrMoriarty</author>
+    <keywords>cordova,phonegap,aviasales</keywords>
+    <js-module src="www/aviasales.js" name="AviaSales">
+      <clobbers target="AviaSales" />
+    </js-module>
+    <!--preference name="Marker" /-->
+    <!--preference name="APIToken" /-->
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="AviaSales">
+                <param name="ios-package" value="AviaSales"/>
+            </feature>
+        </config-file>
+
+        <framework src="CoreGraphics.framework" custom="false" />
+        <framework src="src/ios/AviaSalesSDK.framework" custom="true" />
+        <framework src="src/ios/SDWebImage.framework" custom="true" />
+        <resource-file src="src/ios/AviasalesSDKTemplateBundle.bundle"/>
+        <header-file src="src/ios/AviaSales.h"/>
+        <source-file src="src/ios/AviaSales.m" />
+
+        <header-file src="src/ios/AviaSales/ASRaitingStars.h"/>
+        <header-file src="src/ios/AviaSales/ASTAirportPicker.h"/>
+        <header-file src="src/ios/AviaSales/ASTAirportPickerCell.h"/>
+        <header-file src="src/ios/AviaSales/ASTAirportPickerEmptyCell.h"/>
+        <header-file src="src/ios/AviaSales/ASTAirportPickerSearchingCell.h"/>
+        <header-file src="src/ios/AviaSales/ASTCommonFunctions.h"/>
+        <header-file src="src/ios/AviaSales/ASTFilters.h"/>
+        <header-file src="src/ios/AviaSales/ASTFlightCell.h"/>
+        <header-file src="src/ios/AviaSales/ASTResults.h"/>
+        <header-file src="src/ios/AviaSales/ASTResultsTicketCell.h"/>
+        <header-file src="src/ios/AviaSales/ASTSearchForm.h"/>
+        <header-file src="src/ios/AviaSales/ASTSearchFormDateCell.h"/>
+        <header-file src="src/ios/AviaSales/ASTSearchFormOptionsCell.h"/>
+        <header-file src="src/ios/AviaSales/ASTSearchParams.h"/>
+        <header-file src="src/ios/AviaSales/ASTStopoverCell.h"/>
+        <header-file src="src/ios/AviaSales/ASTTicketScreen.h"/>
+        <header-file src="src/ios/AviaSales/ASTWebBrowserViewController.h"/>
+        <header-file src="src/ios/AviaSales/Defines.h"/>
+        <header-file src="src/ios/AviaSales/Filter Cells/ASFilterAirportsSeparatorCell.h"/>
+        <header-file src="src/ios/AviaSales/Filter Cells/ASFilterCellWithAirport.h"/>
+        <header-file src="src/ios/AviaSales/Filter Cells/ASFilterCellWithMobileSwitch.h"/>
+        <header-file src="src/ios/AviaSales/Filter Cells/ASFilterCellWithOneThumbSlider.h"/>
+        <header-file src="src/ios/AviaSales/Filter Cells/ASFilterCellWithTwoThumbsSlider.h"/>
+        <header-file src="src/ios/AviaSales/Filter Cells/ASFilterCellWithView.h"/>
+        <header-file src="src/ios/AviaSales/Filter Cells/ASFilterHeaderCell.h"/>
+
+        <source-file src="src/ios/AviaSales/ASRaitingStars.m"/>
+        <source-file src="src/ios/AviaSales/ASTAirportPicker.m"/>
+        <source-file src="src/ios/AviaSales/ASTAirportPickerCell.m"/>
+        <source-file src="src/ios/AviaSales/ASTAirportPickerEmptyCell.m"/>
+        <source-file src="src/ios/AviaSales/ASTAirportPickerSearchingCell.m"/>
+        <source-file src="src/ios/AviaSales/ASTCommonFunctions.m"/>
+        <source-file src="src/ios/AviaSales/ASTFilters.m"/>
+        <source-file src="src/ios/AviaSales/ASTFlightCell.m"/>
+        <source-file src="src/ios/AviaSales/ASTResults.m"/>
+        <source-file src="src/ios/AviaSales/ASTResultsTicketCell.m"/>
+        <source-file src="src/ios/AviaSales/ASTSearchForm.m"/>
+        <source-file src="src/ios/AviaSales/ASTSearchFormDateCell.m"/>
+        <source-file src="src/ios/AviaSales/ASTSearchFormOptionsCell.m"/>
+        <source-file src="src/ios/AviaSales/ASTSearchParams.m"/>
+        <source-file src="src/ios/AviaSales/ASTStopoverCell.m"/>
+        <source-file src="src/ios/AviaSales/ASTTicketScreen.m"/>
+        <source-file src="src/ios/AviaSales/ASTWebBrowserViewController.m"/>
+        <source-file src="src/ios/AviaSales/Filter Cells/ASFilterAirportsSeparatorCell.m"/>
+        <source-file src="src/ios/AviaSales/Filter Cells/ASFilterCellWithAirport.m"/>
+        <source-file src="src/ios/AviaSales/Filter Cells/ASFilterCellWithMobileSwitch.m"/>
+        <source-file src="src/ios/AviaSales/Filter Cells/ASFilterCellWithOneThumbSlider.m"/>
+        <source-file src="src/ios/AviaSales/Filter Cells/ASFilterCellWithTwoThumbsSlider.m"/>
+        <source-file src="src/ios/AviaSales/Filter Cells/ASFilterCellWithView.m"/>
+        <source-file src="src/ios/AviaSales/Filter Cells/ASFilterHeaderCell.m"/>
+
+        <header-file src="src/ios/NMRangeSlider/NMRangeSlider.h"/>
+        <source-file src="src/ios/NMRangeSlider/NMRangeSlider.m"/>
+
+        <header-file src="src/ios/SDVersion/SDiOSVersion/SDiOSVersion.h"/>
+        <header-file src="src/ios/SDVersion/SDVersion.h"/>
+        <source-file src="src/ios/SDVersion/SDiOSVersion/SDiOSVersion.m"/>
+
+    </platform>
+
+    <!-- android -->
+    <platform name="android">
+        <!-- Cordova 2.5+ -->
+        <config-file target="config.xml" parent="/*">
+            <feature name="AviaSales">
+                <param name="android-package" value="org.cordova.plugin.AviaSales"/>
+            </feature>
+        </config-file>
+        <!--framework src="src/android/odnoklassniki-android-sdk" custom="true" /-->
+        <source-file src="src/android/AviaSales.java" target-dir="src/org/cordova/plugin/aviasales/" />
+    </platform>
+</plugin>
